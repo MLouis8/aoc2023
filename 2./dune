@@ -1,4 +1,4 @@
 (executables
- (names calibration)
+ (names cube_game)
  (libraries aoc2023)
 )

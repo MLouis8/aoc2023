@@ -1,11 +1,4 @@
-let read_file file =
-  let ic = open_in file in
-  let rec aux l =
-    match input_line ic with
-    | line                  -> aux (line :: l)
-    | exception End_of_file -> close_in ic; List.rev l
-  in
-  aux []
+open Aoc2023
 
 let to_int i = i - 48
 
@@ -91,5 +84,5 @@ let calibration2 (text: string list): int =
   ) 0 text
 
 let () =
-  let text = read_file "1./calibration.txt" in
+  let text = File.read_file "1./calibration.txt" in
   print_int (calibration2 text);
